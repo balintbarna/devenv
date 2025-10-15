@@ -344,6 +344,7 @@
             ci = config.ciDerivation;
             inherit config;
           };
+          nonFlakeWrapper = import ./wrapper.nix { mkShell = self.lib.mkShell; };
       };
 
       overlays.default = final: prev: {
