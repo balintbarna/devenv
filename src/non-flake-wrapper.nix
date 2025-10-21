@@ -1,14 +1,13 @@
-{ mkShell }:
+{ self }:
 { projectRoot }:
 {
-  nixpkgs,
-  configuration,
+  pkgs,
+  inputs,
+  modules,
 }:
-mkShell {
+self.lib.mkShell {
   inputs = {
-    inherit nixpkgs;
     self = projectRoot;
-  };
-  pkgs = nixpkgs;
-  modules = [ configuration ];
+  } // inputs;
+  inherit pkgs modules;
 }
