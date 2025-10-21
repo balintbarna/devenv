@@ -1,4 +1,4 @@
-self: projectRoot:
+mkShell: projectRoot:
 {
   pkgs,
   inputs ? { nixpkgs = pkgs; },
