@@ -7,6 +7,7 @@ mkShell: projectRoot:
 mkShell {
   inputs = {
     self = projectRoot;
-  } // inputs;
+  }
+  // inputs;
   inherit pkgs modules;
 }
