@@ -1,8 +1,7 @@
-{ self }:
-{ projectRoot }:
+self: projectRoot:
 {
   pkgs,
-  inputs,
+  inputs ? { nixpkgs = pkgs; },
   modules,
 }:
 self.lib.mkShell {
