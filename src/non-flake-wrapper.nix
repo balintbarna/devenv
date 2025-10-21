@@ -1,4 +1,4 @@
-{ mkShell }:
+mkShell:
 { projectRoot }:
 {
   pkgs,
