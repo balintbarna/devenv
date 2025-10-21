@@ -4,7 +4,7 @@ mkShell: projectRoot:
   inputs ? { nixpkgs = pkgs; },
   modules,
 }:
-self.lib.mkShell {
+mkShell {
   inputs = {
     self = projectRoot;
   } // inputs;
